@@ -1,10 +1,9 @@
-import { Header } from '@components/Header';
 import * as S from './styles';
 
-export function Groups() {
+export function Loading() {
     return (
         <S.Container>
-            <Header />
+            <S.LoadIndicator />
         </S.Container>
     );
 }
