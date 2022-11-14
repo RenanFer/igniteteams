@@ -13,6 +13,12 @@ import * as S from './styles';
 export function Groups() {
     const [groups, setGroups] = useState<string[]>([]);
 
+    const navigation = useNavigation();
+
+    function handleNewGroup() {
+        navigation.navigate('new');
+    }
+
     return (
         <S.Container>
             <Header />
@@ -28,7 +34,7 @@ export function Groups() {
                 showsVerticalScrollIndicator={false}
             />
 
-            <Button title="Criar nova turma" onPress={() => {}} />
+            <Button title="Criar nova turma" onPress={handleNewGroup} />
         </S.Container>
     );
 }
